@@ -9,14 +9,21 @@
      <!-- <h1>Welcome to week 1 everybody</h1> -->
      <!-- Everything between the script tags must be Javascript -->
      <script> 
+        var name = prompt("Users name");
+        var age = prompt("Users age");
+        var day  = prompt("Current day");
+        
+
         document.write("<b>Welcome to Javascript</b>");
         document.write("<br/>");
-        document.write("<b>Riley Baptiste III</b>");
+        document.write("<b>" + name + "</b>");
         document.write("<br/>");
-        document.write("<b>" + 39 / 3 + "</b>");
+        document.write("<b>" + (age / 3) + "</b>");
         document.write("<br/>");
         document.write("<b>" + (101779 * 127) + "</b>");
+        document.write("</br>");
+        document.write("<b>Age * Day: " + (age * day) + "</b>");
      </script>
 
-    </body>
+    </body> 
 </html>
