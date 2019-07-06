@@ -1,4 +1,4 @@
 # Javascript Course
-# This is my first project form my javascript class
+# This is my first project from my javascript class
 # I am hoping to learn JavaScript
 # riley.bap@outlook.com
