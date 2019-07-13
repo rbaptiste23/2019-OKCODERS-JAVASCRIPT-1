@@ -2,34 +2,36 @@
 <html>
 
 <head>
-    <meta charset="UTF-8">
-    <title>Okcoders Javasript</title>
+  <meta charset="UTF-8">
+  <title>Okcoders Javasript</title>
 </head>
 
 <body>
 
-    <script>
-   
-      // var words = "It is a far far better thing I do"; 
-      // var upperWords = words.toUpperCase();
-
-
-      // document.write(upperWords);
-
-
-     function dogAge(human){
-
-       document.write("<i> The dog years is: " + (human * 7) + ".</i>");
+  <style>
+     body{
+       background-color: red;
+       color: #fff;
      }
 
-     var humanYears = prompt("Enter human years");
+  </style>
 
-     dogAge(humanYears);
+  <script>
 
+    function repeatWord(word, repeat) {
 
+      for (var i = 0; i < repeat; i++) {
+        document.write("<h1>" + word + "</h1>");
+      }
 
-     
-    </script>
+    }
+
+    var userWord = prompt("Enter a word");
+    var numOfTimes = prompt("Enter the number of times you want it repeated");
+
+    repeatWord(userWord, numOfTimes);
+
+  </script>
 
 </body>
 
