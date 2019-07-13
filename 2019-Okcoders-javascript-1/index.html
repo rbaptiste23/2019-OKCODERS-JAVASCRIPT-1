@@ -12,6 +12,9 @@
    
 
       function bobSays(whatHeSaid, times) {
+
+          document.write(typeof times + "<br>");
+
           for (var i=1; i<=times; i++) {
             document.write("Bob says, " + whatHeSaid + "<br>");
           }
@@ -21,6 +24,7 @@
 
       bobSays("Hello", 3);
       bobSays("Goodbye", 5);
+      bobSays("Yo");
  
     </script>
 
