@@ -10,22 +10,25 @@
 
     <script>
    
-
-      function bobSays(whatHeSaid, times) {
-
-          document.write(typeof times + "<br>");
-
-          for (var i=1; i<=times; i++) {
-            document.write("Bob says, " + whatHeSaid + "<br>");
-          }
-    
-      }
+      // var words = "It is a far far better thing I do"; 
+      // var upperWords = words.toUpperCase();
 
 
-      bobSays("Hello", 3);
-      bobSays("Goodbye", 5);
-      bobSays("Yo");
- 
+      // document.write(upperWords);
+
+
+     function dogAge(human){
+
+       document.write("<h1> The dog years is: " + (human * 7) + ".</h1>");
+     }
+
+     var humanYears = prompt("Enter human years");
+
+     dogAge(humanYears);
+
+
+
+     
     </script>
 
 </body>
