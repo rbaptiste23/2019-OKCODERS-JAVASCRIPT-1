@@ -11,15 +11,17 @@
     <script>
    
 
-        var bottles = 99;
+      function bobSays(whatHeSaid, times) {
+          for (var i=1; i<=times; i++) {
+            document.write("Bob says, " + whatHeSaid + "<br>");
+          }
+    
+      }
 
-        while (bottles > 0 ) {
-            document.write( bottles + " bottles of beer on the wall, 99 bottles of beer.");
-            bottles--;
-            document.write("Take one down and pass it around, " + bottles + " bottles of beer on the wall..");
-            document.write("<br/>")
-        }
 
+      bobSays("Hello", 3);
+      bobSays("Goodbye", 5);
+ 
     </script>
 
 </body>
