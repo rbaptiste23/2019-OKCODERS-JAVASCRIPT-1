@@ -34,18 +34,27 @@
     <h3 id="author"></h3> 
   </div>
 
-  <input type="text" id="name" placeholder="Charles Dickens">
+  <input type="text" id="titleText" placeholder="Title">
+  <input type="text" id="authorText" placeholder="Author">
+
   <button onclick="displayToScreen()">Set Author</button>
 
 
-<!-- Javascript must be below the HTML -->
 
+
+<!-- Javascript must be below the HTML -->
   <script>
+
+     var authors = ["Virgina Wolfe", "J.R.R. Token"];
+
+
+
       function displayToScreen() {
-        document.getElementById("title").innerText = document.getElementById("name").value; 
+        document.getElementById("title").innerText = document.getElementById("titleText").value; 
+        document.getElementById("author").innerText = document.getElementById("authorText").value; 
       }
   </script>
-  
+
 </body>
 
 </html>
