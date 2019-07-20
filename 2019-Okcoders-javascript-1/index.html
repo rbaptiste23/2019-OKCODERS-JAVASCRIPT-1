@@ -15,6 +15,12 @@
 
     h1 {
       border: 3px solid blue;
+      margin: 0px;
+    }
+
+    h3 {
+      border: 3px dotted orange;
+      margin: 0px;
     }
 
  </style>
@@ -22,36 +28,25 @@
 
 <body>
 
+
+  <div id="music">
+    <h1 id="title"></h1>
+    <h3 id="author"></h3>
+  </div>
+
+
+<!-- Javascript must be below the HTML -->
+
   <script>
-      function displayToScreen(sometext) {
-        document.write(sometext);
+      function displayToScreen(t, a) {
+        document.getElementById("title").innerText = t;
+        document.getElementById("author").innerText = a; 
       }
 
-      let ourList = ["one","two","three"];
+     let author = prompt("Name of author?");
+     let title =  prompt("Name of title?");
 
-      let ourList2=[];
-
-
-      // Add another item to the list
-      ourList.push("four");
-    
-
-      for (let i=0; i < ourList.length; i++){
-        displayToScreen("<h1>" + ourList[i] + "</h1>" );
-      }
-
-      ourList.pop();
-
-      for (let i=0; i < ourList.length; i++){
-        displayToScreen("<h1>" + ourList[i] + "</h1>" );
-      }
-
-
-      for (let j=0; j<100; j++){
-        ourList2.push("the val " + j);
-        displayToScreen("<h1>" + ourList2[j] + "</h1>");
-      }
-
+     displayToScreen(author,title);
   </script>
 
 </body>
