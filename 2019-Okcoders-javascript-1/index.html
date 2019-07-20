@@ -31,24 +31,21 @@
 
   <div id="music">
     <h1 id="title"></h1>
-    <h3 id="author"></h3>
+    <h3 id="author"></h3> 
   </div>
+
+  <input type="text" id="name" placeholder="Charles Dickens">
+  <button onclick="displayToScreen()">Set Author</button>
 
 
 <!-- Javascript must be below the HTML -->
 
   <script>
-      function displayToScreen(t, a) {
-        document.getElementById("title").innerText = t;
-        document.getElementById("author").innerText = a; 
+      function displayToScreen() {
+        document.getElementById("title").innerText = document.getElementById("name").value; 
       }
-
-     let author = prompt("Name of author?");
-     let title =  prompt("Name of title?");
-
-     displayToScreen(author,title);
   </script>
-
+  
 </body>
 
 </html>
