@@ -29,8 +29,27 @@
 
       let ourList = ["one","two","three"];
 
+      let ourList2=[];
+
+
+      // Add another item to the list
+      ourList.push("four");
+    
+
       for (let i=0; i < ourList.length; i++){
         displayToScreen("<h1>" + ourList[i] + "</h1>" );
+      }
+
+      ourList.pop();
+
+      for (let i=0; i < ourList.length; i++){
+        displayToScreen("<h1>" + ourList[i] + "</h1>" );
+      }
+
+
+      for (let j=0; j<100; j++){
+        ourList2.push("the val " + j);
+        displayToScreen("<h1>" + ourList2[j] + "</h1>");
       }
 
   </script>
