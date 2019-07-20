@@ -8,8 +8,8 @@
   <title>Okcoders Javasript</title>
 
   <style>
-    body{
-      background-color: green;
+    body {
+      background-color: yellow;
       color: #fff;
     }
 
@@ -22,37 +22,76 @@
       border: 3px dotted orange;
       margin: 0px;
     }
-
- </style>
+  </style>
 </head>
 
 <body>
 
 
-  <div id="music">
-    <h1 id="title"></h1>
-    <h3 id="author"></h3> 
+  <div id="myList">
+
   </div>
 
-  <input type="text" id="titleText" placeholder="Title">
-  <input type="text" id="authorText" placeholder="Author">
+  <input type="text" id="title" placeholder="Enter Book title" /><br>
+  <input type="text" id="name" placeholder="Enter Authors Name" />
 
   <button onclick="displayToScreen()">Set Author</button>
 
+  <button onclick="removeBook()">Remove Book</button><br>
 
 
 
-<!-- Javascript must be below the HTML -->
+  <!-- Javascript must be below the HTML -->
+
+
   <script>
 
-     var authors = ["Virgina Wolfe", "J.R.R. Token"];
+
+    // var authors = ["Virgina Wolfe", "J.R.R. Token"];
+    var book1 = {
+      author: "J.RR. Tolken",
+      title: "Lord of the Rings"
+
+    }
+
+    var book2 = {
+      author: "Charles Dickens",
+      title: "A new book"
+    }
+
+    var book3 = {
+      author: "Reid Hoffman",
+      title: "Blitzscaling"
+    }
+
+    let books = [book1, book2, book3];
+
+    function displayToScreen() {
+      let n = document.getElementById("name").value;
+      let t = document.getElementById("title").value;
+      let newBook = { author: n, title: t };
+      books.push(newBook);
+      printAuthList();
+    }
 
 
-
-      function displayToScreen() {
-        document.getElementById("title").innerText = document.getElementById("titleText").value; 
-        document.getElementById("author").innerText = document.getElementById("authorText").value; 
+    function printAuthList() {
+      let auth = document.getElementById("myList");
+      auth.innerHTML = "";
+      for (let i = 0; i < books.length; i++) {
+        auth.innerHTML += "<h2 style='color:blue'>" + books[i].title + "</h2>";
+        auth.innerHTML += "<h4 style='color:green'>" + books[i].author + "</h4>";
       }
+    }
+
+    function removeBook(){
+      books.pop();
+      printAuthList();
+    }
+
+
+    printAuthList();
+
   </script>
 
 </body>
