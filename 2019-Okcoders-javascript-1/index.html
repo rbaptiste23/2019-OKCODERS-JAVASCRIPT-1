@@ -3,32 +3,36 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <meta http-equiv="X-UA-Compatible">
   <title>Okcoders Javasript</title>
+
+  <style>
+    body{
+      background-color: green;
+      color: #fff;
+    }
+
+    h1 {
+      border: 3px solid blue;
+    }
+
+ </style>
 </head>
 
 <body>
 
-  <style>
-     body{
-       background-color: red;
-       color: #fff;
-     }
-
-  </style>
-
   <script>
-
-    function printNum(myArray){
-      for (var i=0; i < myArray.length; i++){
-        document.write("Number is " + myArray[i] + "<br>");
+      function displayToScreen(sometext) {
+        document.write(sometext);
       }
-    }
-    var nums = [23,12,1,2,6,3];
 
-    printNum(nums);
+      let ourList = ["one","two","three"];
 
-    nums.push(55);
-    printNum(nums);
+      for (let i=0; i < ourList.length; i++){
+        displayToScreen("<h1>" + ourList[i] + "</h1>" );
+      }
+
   </script>
 
 </body>
